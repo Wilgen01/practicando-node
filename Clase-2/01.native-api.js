@@ -26,6 +26,6 @@ const server = http.createServer((req, res) =>{
     }
 })
 
-server.listen(PORT , (a) => {
+server.listen(PORT , () => {
     console.log(`Server on port ${PORT}`);
 })
