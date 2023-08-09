@@ -9,8 +9,7 @@ POST http://localhost:3000/movies/add
 Content-Type: application/json
 
 {
-  "id": 1,
-  "nombre": "Titanic",
-  "estreno": 1997,
-  "descripcion": "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural."
+  "nombre": "Volver al futuro",
+  "estreno": 1985,
+  "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria."
 }

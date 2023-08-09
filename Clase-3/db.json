@@ -1,8 +1,14 @@
 [
     {
-        "id" : "90a60be3-70f5-4a35-af28-ddfb2a6c832b",
-        "nombre" : "Titanic",
+        "id": "82d814d9-3c0a-4f0b-a82d-20e0a8965fb3",
+        "nombre": "Titanic",
         "estreno": 1997,
         "descripcion": "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural."
+    },
+    {
+        "nombre": "Volver al futuro",
+        "estreno": 1985,
+        "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria.",
+        "id": "7ff39cd5-635e-4c99-8c35-35a026beb773"
     }
 ]

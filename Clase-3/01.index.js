@@ -1,22 +1,36 @@
 const express = require('express');
-const data = require('./db.json')
+const crypto = require('crypto')
 const fs = require('node:fs/promises')
 
 const app = express()
 app.use(express.json())
 
-app.get('/movies', (req, res) => {
-    res.send(data)
+app.get('/movies', async (req, res) => {
+    const movies = JSON.parse(await fs.readFile('./db.json', 'utf8'));
+    res.send(movies)
 })
 
-app.get('/movies/:id', (req, res) => {
+app.get('/movies/:id', async (req, res) => {
     const {id} = req.params
 
-    const pelicula = data.find(pelicula => pelicula.id == id);
+    const movies = JSON.parse(await fs.readFile('./db.json', 'utf8'));
+
+    const pelicula = movies.find(pelicula => pelicula.id == id);
 
     if (!pelicula) return res.status(404).json({"ok": false, "message": "Pelicula no encontrada"})
 
     res.send(pelicula);
+})
+
+app.post('/movies/add', async (req, res) => {
+    const body = req.body
+    body.id = crypto.randomUUID()
+
+    const movies = JSON.parse(await fs.readFile('./db.json', 'utf8'));
+    movies.push(body)
+    
+    await fs.writeFile('./db.json', JSON.stringify(movies) , 'utf-8');
+    res.json(movies)
 })
 
 app.listen(3000, () => {
