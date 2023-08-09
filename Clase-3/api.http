@@ -1,0 +1,16 @@
+### Obtener peliculas
+http://localhost:3000/movies
+
+### Obtener pelicula por id
+http://localhost:3000/movies/1
+
+### añadir pelicula
+POST http://localhost:3000/movies/add
+Content-Type: application/json
+
+{
+  "id": 1,
+  "nombre": "Titanic",
+  "estreno": 1997,
+  "descripcion": "Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural."
+}
