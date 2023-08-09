@@ -33,6 +33,16 @@ app.post('/movies/add', async (req, res) => {
     res.json(movies)
 })
 
+app.delete('/movies/:id', async (req, res) => {
+    const {id} = req.params
+
+    const movies = JSON.parse(await fs.readFile('./db.json', 'utf8'));
+    const peliculasFiltradas = movies.filter(pelicula => pelicula.id != id);
+    await fs.writeFile('./db.json', JSON.stringify(peliculasFiltradas) , 'utf-8');
+
+    res.status(200).send({"ok": true, "message": "Pelicula eliminada con exito"})
+})
+
 app.listen(3000, () => {
     console.log("Server runnig on port 3000");
 })

@@ -13,3 +13,7 @@ Content-Type: application/json
   "estreno": 1985,
   "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria."
 }
+
+
+### eliminar pelicula
+DELETE http://localhost:3000/movies/d768e0f0-cf1b-420f-9ae3-94b955de701b
