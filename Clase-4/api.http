@@ -1,0 +1,19 @@
+### Obtener peliculas
+http://localhost:3001/movies
+
+### Obtener pelicula por id
+http://localhost:3001/movies/1
+
+### añadir pelicula
+POST http://localhost:3001/movies/add
+Content-Type: application/json
+
+{
+  "nombre": "Volver al futuro",
+  "estreno": 1985,
+  "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria."
+}
+
+
+### eliminar pelicula
+DELETE http://localhost:3001/movies/72b1bd2c-49bc-4e75-8a30-13a8dec2c6f6
