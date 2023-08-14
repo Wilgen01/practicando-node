@@ -2,7 +2,7 @@
 http://localhost:3001/movies
 
 ### Obtener pelicula por id
-http://localhost:3001/movies/1
+http://localhost:3001/movies/72b1bd2c-49bc-4e75-8a30-13a8dec2c6f6
 
 ### añadir pelicula
 POST http://localhost:3001/movies/add
@@ -16,4 +16,4 @@ Content-Type: application/json
 
 
 ### eliminar pelicula
-DELETE http://localhost:3001/movies/72b1bd2c-49bc-4e75-8a30-13a8dec2c6f6
+DELETE http://localhost:3001/movies/c9863342-72b3-49ea-aa7e-fc230399f26f
