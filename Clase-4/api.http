@@ -16,4 +16,4 @@ Content-Type: application/json
 
 
 ### eliminar pelicula
-DELETE http://localhost:3001/movies/c9863342-72b3-49ea-aa7e-fc230399f26f
+DELETE http://localhost:3001/movies/e9152980-cc2f-4dc3-9db5-7e923c2b75c8
