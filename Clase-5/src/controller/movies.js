@@ -1,4 +1,4 @@
-import { MovieModel } from "../model/local-file-system/movie.js";
+import { MovieModel } from "../model/mysql/movie.js";
 
 export class MovieController {
     static async getAll(req, res) {

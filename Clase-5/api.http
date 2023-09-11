@@ -1,5 +1,5 @@
 ### Obtener peliculas
-http://localhost:3001/movies
+http://localhost:3000/movies
 
 ### Obtener pelicula por id
 http://localhost:3001/movies/72b1bd2c-49bc-4e75-8a30-13a8dec2c6f6
