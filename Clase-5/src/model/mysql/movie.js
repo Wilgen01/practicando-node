@@ -31,11 +31,21 @@ export class MovieModel {
         await connection.query(`INSERT INTO movie (id, title, year, director, duration, poster, rate) 
         VALUES(UUID_TO_BIN(?),?,?,?,?,?,?)`, [id, title, year, director, duration, poster, rate])
         
-        const movie = this.getById({id})
+        const movie = await this.getById({id})
         
         return movie
     }
 
     static async delete({ id }) {
+
+        const movie = await this.getById({id})
+        console.log(movie)
+        if (movie.length == 0) 
+          return { "ok": false, "message": "La pelicula no se ha encontrado" }     
+        
+
+        const query = 'DELETE FROM movie WHERE id=UUID_TO_BIN(?)'
+        await connection.query(query, [id])
+        return { "ok": true, "message": "Pelicula eliminada con exito" }
     }
 }
