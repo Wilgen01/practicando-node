@@ -2,7 +2,7 @@
 http://localhost:3000/movies
 
 ### Obtener pelicula por id
-http://localhost:3000/movies/f8d0c36f-5181-11ee-8580-b42e99e24955
+http://localhost:3000/movies/8b08bac2-50c6-11ee-8e57-b42e99e24955
 
 ### añadir pelicula
 POST http://localhost:3000/movies/add
@@ -20,4 +20,4 @@ Content-Type: application/json
 
 
 ### eliminar pelicula
-DELETE http://localhost:3000/movies/f8d0c36f-5181-11ee-8580-b42e99e24955
+DELETE http://localhost:3000/movies/918100f0-5183-11ee-8580-b42e99e24955

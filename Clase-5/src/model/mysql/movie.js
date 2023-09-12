@@ -39,7 +39,6 @@ export class MovieModel {
     static async delete({ id }) {
 
         const movie = await this.getById({id})
-        console.log(movie)
         if (movie.length == 0) 
           return { "ok": false, "message": "La pelicula no se ha encontrado" }     
         
