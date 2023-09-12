@@ -1,1 +1,47 @@
-[{"id":"72b1bd2c-49bc-4e75-8a30-13a8dec2c6f6","nombre":"Titanic","estreno":1997,"descripcion":"Una joven de la alta sociedad abandona a su arrogante pretendiente por un artista humilde en el trasatlántico que se hundió durante su viaje inaugural."},{"id":"2f2ca811-405a-4ad5-ab49-1e51070f0ccb","nombre":"Volver al futuro","estreno":1985,"descripcion":"Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria."}]
+[
+    {
+        "id": "8b08bac2-50c6-11ee-8e57-b42e99e24955",
+        "title": "The Shawshank Redemption",
+        "year": 1994,
+        "director": "Frank Darabont",
+        "duration": 142,
+        "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+        "rate": "9.3"
+      },
+      {
+        "id": "8b08be6e-50c6-11ee-8e57-b42e99e24955",
+        "title": "The Godfather",
+        "year": 1972,
+        "director": "Francis Ford Coppola",
+        "duration": 175,
+        "poster": "https://i.ebayimg.com/images/g/3RQAAOSw~2he~AdJ/s-l1600.webp",
+        "rate": "9.2"
+      },
+      {
+        "id": "8b08bf2d-50c6-11ee-8e57-b42e99e24955",
+        "title": "Pulp Fiction",
+        "year": 1994,
+        "director": "Quentin Tarantino",
+        "duration": 154,
+        "poster": "https://i.ebayimg.com/images/g/mVAAAOSwR29c~2wR/s-l1600.webp",
+        "rate": "8.9"
+      },
+      {
+        "id": "8b08c062-50c6-11ee-8e57-b42e99e24955",
+        "title": "The Dark Knight",
+        "year": 2008,
+        "director": "Christopher Nolan",
+        "duration": 152,
+        "poster": "https://i.ebayimg.com/images/g/rEoAAOSw8dVeZ9Q2/s-l1600.webp",
+        "rate": "9.0"
+      },
+      {
+        "id": "8b08c0e0-50c6-11ee-8e57-b42e99e24955",
+        "title": "Schindler's List",
+        "year": 1993,
+        "director": "Steven Spielberg",
+        "duration": 195,
+        "poster": "https://i.ebayimg.com/images/g/eKwAAOSwz3Je~XKp/s-l1600.webp",
+        "rate": "8.9"
+      }
+]

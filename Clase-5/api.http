@@ -5,13 +5,17 @@ http://localhost:3000/movies
 http://localhost:3000/movies/8b08bac2-50c6-11ee-8e57-b42e99e24955
 
 ### añadir pelicula
-POST http://localhost:3001/movies/add
+POST http://localhost:3000/movies/add
 Content-Type: application/json
 
 {
-  "nombre": "Volver al futuro",
-  "estreno": 1985,
-  "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria."
+  "title": "Volver al futuro",
+  "year": 1985,
+  "descripcion": "Una máquina del tiempo transporta a un adolescente a los años 50, cuando sus padres todavía estudiaban en la secundaria.",
+  "director": "random",
+  "duration": 142,
+  "poster": "https://i.ebayimg.com/images/g/4goAAOSwMyBe7hnQ/s-l1200.webp",
+  "rate": "9.3"
 }
 
 

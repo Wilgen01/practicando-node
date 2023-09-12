@@ -62,4 +62,5 @@ VALUES (
 );
 
 
-select *, bin_to_uuid(id) id from movie m 
+select *, bin_to_uuid(id) id from movie; 
+SELECT * FROM movie WHERE id = '8b08bac2-50c6-11ee-8e57-b42e99e24955'":
