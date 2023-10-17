@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "morgan": "1.10.0"
   },
   "name": "practicando-node",
   "description": "Practicando funcionalidades de nodeJs Nativo y Express",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "node 01.index.js"
