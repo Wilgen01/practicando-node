@@ -45,6 +45,12 @@
       background: #000;
     }
 
+    #messages>li.alert{
+      padding: .5rem 1rem;
+      background: none;
+      text-align: center;
+    }
+
     #chat {
       border: 1px solid #ccc;
       border-radius: 4px;
@@ -88,6 +94,69 @@
       background: #0cf;
     }
   </style>
+  <script type="module">
+    import { io } from 'https://cdn.socket.io/4.3.2/socket.io.esm.min.js'
+
+    const form = document.getElementById('form')
+    const input = document.getElementById('input')
+    const messages = document.getElementById('messages')
+
+
+
+    const getUsername = () => {
+      const username = localStorage.getItem('username') ?? prompt("Ingresa tu nombre de usuario")
+
+      if (!username) {
+        return getUsername();
+      }
+      localStorage.setItem('username', username)
+      return username;
+    }
+
+    const socket = io({
+      auth: {
+        username: getUsername(),
+        serverOffset: 0
+      }
+    });
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const message = input.value;
+      input.value = "";
+
+      if (message != null) {
+        console.log(input.value);
+        socket.emit('message', message);
+      }
+
+    })
+
+    socket.on('message', (msg, username) => {
+      const item = `<li>
+        <p>${msg}</p>
+        <small>By: ${username}</small>
+      </li>`
+      messages.insertAdjacentHTML('beforeend', item)
+    })
+
+    socket.on('connection', (username) => {
+      const user = `<li class="alert">
+        <p>${username} se ha unido</p>
+      </li>`
+      messages.insertAdjacentHTML('beforeend', user)
+    })
+
+    socket.on('disconnection', (username) => {
+      const user = `<li class="alert">
+        <p>${username} ha dejado el chat</p>
+      </li>`
+      messages.insertAdjacentHTML('beforeend', user)
+    })
+
+
+  </script>
 </head>
 
 <body>
